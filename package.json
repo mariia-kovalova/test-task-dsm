@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "deploy": "build --build & gulp deploy"
+    "deploy": "gulp build --build & gulp deploy"
   },
   "author": "",
   "license": "ISC",

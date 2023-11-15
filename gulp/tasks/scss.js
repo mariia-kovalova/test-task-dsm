@@ -1,10 +1,12 @@
-import dartSass from "sass";
-import gulpSass from "gulp-sass";
-import rename from "gulp-rename";
-import groupMediaQuires from "gulp-group-css-media-queries";
-import webpcss from "gulp-webpcss";
-import autoPrefixer from "gulp-autoprefixer";
-import cleanCss from "gulp-clean-css";
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import rename from 'gulp-rename';
+import webpcss from 'gulp-webpcss';
+import autoPrefixer from 'gulp-autoprefixer';
+import cleanCss from 'gulp-clean-css';
+import postcss from 'gulp-postcss';
+import postcssScss from 'postcss-scss';
+import tailwindcss from 'tailwindcss';
 
 const sass = gulpSass(dartSass);
 
@@ -16,30 +18,35 @@ export const scss = () => {
     .pipe(
       plugins.plumber(
         plugins.notify.onError({
-          title: "SCSS",
-          message: "Error: <%= error.message %>",
-        })
-      )
+          title: 'SCSS',
+          message: 'Error: <%= error.message %>',
+        }),
+      ),
     )
-    .pipe(plugins.replace(/@img\//g, "../img/"))
-    .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(groupMediaQuires())
+    .pipe(plugins.replace(/@img\//g, '../img/'))
+    .pipe(plugins.replace(/@fonts\//g, '../fonts/'))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(
       webpcss({
-        webpClass: ".webp",
-        noWebpClass: ".no-webp",
-      })
+        webpClass: '.webp',
+        noWebpClass: '.no-webp',
+      }),
+    )
+    .pipe(
+      postcss([tailwindcss], {
+        parser: postcssScss,
+      }),
     )
     .pipe(
       autoPrefixer({
         grid: true,
         cascade: true,
-        overrideBrowserlist: ["last 3 versions"],
-      })
+        overrideBrowserlist: ['last 3 versions'],
+      }),
     )
     .pipe(gulp.dest(path.build.css))
     .pipe(cleanCss())
-    .pipe(rename({ extname: ".min.css" }))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest(path.build.css))
     .pipe(plugins.browserSync.stream());
 };

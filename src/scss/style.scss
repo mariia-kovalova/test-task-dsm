@@ -1,4 +1,5 @@
-body {
-  background-color: rebeccapurple;
-  background: url("@img/IMG_20230809_223035_652.jpg");
-}
+@import 'vendors/modern-normalize';
+@import 'utils/mixins';
+@import 'vendors/tailwind';
+
+@import 'sections/header';

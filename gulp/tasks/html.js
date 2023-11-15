@@ -3,7 +3,7 @@ import webHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
 
 export const html = () => {
-  const { gulp, path, plugins } = app;
+  const { gulp, path, plugins, isBuild } = app;
 
   return gulp
     .src(path.src.html)
@@ -17,19 +17,22 @@ export const html = () => {
     )
     .pipe(fileinclude())
     .pipe(plugins.replace(/@img\//g, "img/"))
-    .pipe(webHtmlNosvg())
+    .pipe(plugins.gulpIf(isBuild, webHtmlNosvg()))
     .pipe(
-      versionNumber({
-        value: "%DT%",
-        append: {
-          key: "_v",
-          cover: 0,
-          to: ["css", "js"],
-        },
-        output: {
-          file: "gulp/version.json",
-        },
-      })
+      plugins.gulpIf(
+        isBuild,
+        versionNumber({
+          value: "%DT%",
+          append: {
+            key: "_v",
+            cover: 0,
+            to: ["css", "js"],
+          },
+          output: {
+            file: "gulp/version.json",
+          },
+        })
+      )
     )
     .pipe(gulp.dest(path.build.html))
     .pipe(plugins.browserSync.stream());

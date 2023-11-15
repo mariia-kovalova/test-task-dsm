@@ -9,10 +9,13 @@ import { server } from "./gulp/tasks/server.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { fonts } from "./gulp/tasks/fonts.js";
+import { sprite } from "./gulp/tasks/sprite.js";
 
 const { watch, series, parallel, task } = gulp;
 
 global.app = {
+  isBuild: process.argv.includes("--build"),
+  isDev: !process.argv.includes("--build"),
   path: path,
   gulp: gulp,
   plugins: plugins,
@@ -26,8 +29,9 @@ function watcher() {
   watch(path.watch.images, images);
 }
 
-const mainTasks = parallel(fonts, copy, html, scss, js, images);
+const mainTasks = parallel(fonts, copy, html, scss, js, images, sprite);
 
-const dev = series(reset, mainTasks, parallel(watcher, server));
+export const dev = series(reset, mainTasks, parallel(watcher, server));
+export const build = series(reset, mainTasks);
 
 task("default", dev);

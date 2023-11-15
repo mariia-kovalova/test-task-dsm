@@ -9,10 +9,10 @@ import cleanCss from "gulp-clean-css";
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-  const { gulp, path, plugins } = app;
+  const { gulp, path, plugins, isDev } = app;
 
   return gulp
-    .src(path.src.scss, { sourcemaps: true })
+    .src(path.src.scss, { sourcemaps: isDev })
     .pipe(
       plugins.plumber(
         plugins.notify.onError({

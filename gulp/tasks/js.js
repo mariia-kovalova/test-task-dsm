@@ -1,10 +1,10 @@
 import webpackStream from "webpack-stream";
 
 export const js = () => {
-  const { gulp, path, plugins } = app;
+  const { gulp, path, plugins, isDev, isBuild } = app;
 
   return gulp
-    .src(path.src.js, { sourcemaps: true })
+    .src(path.src.js, { sourcemaps: isDev })
     .pipe(
       plugins.plumber(
         plugins.notify.onError({
@@ -15,7 +15,7 @@ export const js = () => {
     )
     .pipe(
       webpackStream({
-        mode: "development",
+        mode: isBuild ? "production" : "development",
         output: {
           filename: "app.min.js",
         },

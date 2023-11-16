@@ -1,3 +1,8 @@
 .switcher {
-  @apply flex items-center gap-1 font-black;
+  @apply flex cursor-pointer items-center gap-1 font-black;
+  @apply transition duration-300 hover:text-blue focus:text-blue active:text-blue xl:hover:text-blue-light xl:focus:text-blue-light xl:active:text-blue-light notXl:hover:bg-body;
+
+  &__text {
+    @apply p-1 text-sm;
+  }
 }

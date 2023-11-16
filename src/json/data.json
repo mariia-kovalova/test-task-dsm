@@ -36,38 +36,77 @@
           "height": 16
         }
       },
-      "items": [
-        {
-          "link": "#",
-          "title": "Прогнозы",
-          "dropDown": true
-        },
-        {
-          "link": "#",
-          "title": "Бонусы",
-          "dropDown": true
-        },
-        {
-          "link": "#",
-          "title": "Букмекеры",
-          "dropDown": true
-        },
-        {
-          "link": "#",
-          "title": "Новости",
-          "dropDown": false
-        },
-        {
-          "link": "#",
-          "title": "Робобет",
-          "dropDown": false
-        },
-        {
-          "link": "#",
-          "title": "Блог",
-          "dropDown": false
-        }
-      ]
+      "items": {
+        "mobile": [
+          {
+            "link": "#",
+            "title": "Главная",
+            "dropDown": false
+          },
+          {
+            "link": "#",
+            "title": "Прогнозы",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Бонусы",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Букмекеры",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Новости",
+            "dropDown": false
+          },
+          {
+            "link": "#",
+            "title": "Робобет",
+            "dropDown": false
+          },
+          {
+            "link": "#",
+            "title": "Блог",
+            "dropDown": false
+          }
+        ],
+        "desktop": [
+          {
+            "link": "#",
+            "title": "Прогнозы",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Бонусы",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Букмекеры",
+            "dropDown": true
+          },
+          {
+            "link": "#",
+            "title": "Новости",
+            "dropDown": false
+          },
+          {
+            "link": "#",
+            "title": "Робобет",
+            "dropDown": false
+          },
+          {
+            "link": "#",
+            "title": "Блог",
+            "dropDown": false
+          }
+        ]
+      }
     },
     "switcher": {
       "text": "Рус",
@@ -79,5 +118,104 @@
         "height": 24
       }
     }
+  },
+  "hero": {
+    "title": {
+      "text": "Прогнозы на спорт",
+      "icon": {
+        "icon_aria": "Слеш",
+        "svg": "slash",
+        "width": 16,
+        "height": 16
+      }
+    },
+    "categories": [
+      {
+        "id": "1",
+        "text": "Все",
+        "class": "category_active"
+      },
+      {
+        "id": "2",
+        "text": "Сегодня",
+        "class": ""
+      },
+      {
+        "id": "3",
+        "text": "Завтра",
+        "class": ""
+      }
+    ],
+    "cards": [
+      {
+        "category_id": "3",
+        "isPopular": true,
+        "imgs_list": [
+          {
+            "alt": "Металлург Магнитогорск",
+            "src": "@img/team1.webp",
+            "srcset": "@img/team1@2x.webp",
+            "width": 74,
+            "height": 74
+          },
+          {
+            "alt": "Трактор",
+            "src": "@img/team2.webp",
+            "srcset": "@img/team2@2x.webp",
+            "width": 74,
+            "height": 74
+          }
+        ],
+        "sport": "Футбол",
+        "due": "Завтра в 09:20",
+        "text": "Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022"
+      },
+      {
+        "category_id": "3",
+        "isPopular": true,
+        "imgs_list": [
+          {
+            "alt": "Лейпциг",
+            "src": "@img/team3.webp",
+            "srcset": "@img/team3@2x.webp",
+            "width": 74,
+            "height": 74
+          },
+          {
+            "alt": "Хоффенхайм",
+            "src": "@img/team4.webp",
+            "srcset": "@img/team4@2x.webp",
+            "width": 74,
+            "height": 74
+          }
+        ],
+        "sport": "Футбол",
+        "due": "Завтра в 09:20",
+        "text": "Лейпциг - Хоффенхайм. Прогноз на матч 10.04.2022"
+      },
+      {
+        "category_id": "3",
+        "isPopular": false,
+        "imgs_list": [
+          {
+            "alt": "Манчестер Сити",
+            "src": "@img/team5.webp",
+            "srcset": "@img/team5@2x.webp",
+            "width": 74,
+            "height": 74
+          },
+          {
+            "alt": "Ливерпуль",
+            "src": "@img/team6.webp",
+            "srcset": "@img/team6@2x.webp",
+            "width": 74,
+            "height": 74
+          }
+        ],
+        "sport": "Футбол",
+        "due": "Завтра в 09:20",
+        "text": "Манчестер Сити - Ливерпуль. Прогноз на матч 10.04.2022"
+      }
+    ]
   }
 }

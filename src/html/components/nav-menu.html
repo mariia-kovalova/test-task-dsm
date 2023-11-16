@@ -1,15 +1,17 @@
-{% set component = components.navigation %}
-
 <nav class="nav">
-  <ul class="flex gap-2 notXl:flex-col notXl:items-center notXl:justify-center">
-    {% for item in component.items %}
-    <li class="w-max">
-      <a
-        class="duration-300 hover:text-accent focus:text-accent"
-        href="{{ item.link }}"
-        data-menu-link
-        >{{ item.title }}</a
-      >
+  <ul class="nav__list">
+    {% for item in items %}
+    <li>
+      <a class="nav__link" href="{{ item.link }}" data-menu-link>
+        {{ item.title }}
+        <!--  -->
+        {% if item.dropDown %}
+        <!--  -->
+        {% set icon = components.navigation.icons.arrow %} {% include
+        'components/icon.html' %}
+        <!--  -->
+        {% endif %}
+      </a>
     </li>
     {% endfor %}
   </ul>

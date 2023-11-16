@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card__teams">
+    {% for img in card.imgs_list %}
+    <img
+      width="{{img.width}}"
+      height="{{img.height}}"
+      alt="{{img.alt}}"
+      src="{{img.src}}"
+      srcset="{{img.srcset}} 2x"
+    />
+    {% endfor %}
+  </div>
+
+  <div class="card__content">
+    <h4 class="card__text">
+      <span class="card__sport">{{card.sport}}</span>
+      <span class="card__slash">/</span>
+      <span class="card__due">{{card.due}}</span>
+    </h4>
+    <h3 class="card__title">{{card.text}}</h3>
+  </div>
+</div>

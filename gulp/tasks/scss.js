@@ -13,42 +13,39 @@ const sass = gulpSass(dartSass);
 export const scss = () => {
   const { gulp, path, plugins, isDev } = app;
 
-  return (
-    gulp
-      .src(path.src.scss, { sourcemaps: isDev })
-      .pipe(
-        plugins.plumber(
-          plugins.notify.onError({
-            title: 'SCSS',
-            message: 'Error: <%= error.message %>',
-          }),
-        ),
-      )
-      .pipe(plugins.replace(/@img\//g, '../img/'))
-      // .pipe(plugins.replace(/@fonts\//g, '../fonts/'))
-      .pipe(sass({ outputStyle: 'expanded' }))
-      .pipe(
-        webpcss({
-          webpClass: '.webp',
-          noWebpClass: '.no-webp',
+  return gulp
+    .src(path.src.scss, { sourcemaps: isDev })
+    .pipe(
+      plugins.plumber(
+        plugins.notify.onError({
+          title: 'SCSS',
+          message: 'Error: <%= error.message %>',
         }),
-      )
-      .pipe(
-        postcss([tailwindcss], {
-          parser: postcssScss,
-        }),
-      )
-      .pipe(
-        autoPrefixer({
-          grid: true,
-          cascade: true,
-          overrideBrowserlist: ['last 3 versions'],
-        }),
-      )
-      .pipe(gulp.dest(path.build.css))
-      .pipe(cleanCss())
-      .pipe(rename({ extname: '.min.css' }))
-      .pipe(gulp.dest(path.build.css))
-      .pipe(plugins.browserSync.stream())
-  );
+      ),
+    )
+    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(
+      webpcss({
+        webpClass: '.webp',
+        noWebpClass: '.no-webp',
+      }),
+    )
+    .pipe(
+      postcss([tailwindcss], {
+        parser: postcssScss,
+      }),
+    )
+    .pipe(plugins.replace(/@img\//g, '../img/'))
+    .pipe(
+      autoPrefixer({
+        grid: true,
+        cascade: true,
+        overrideBrowserlist: ['last 3 versions'],
+      }),
+    )
+    .pipe(gulp.dest(path.build.css))
+    .pipe(cleanCss())
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(plugins.browserSync.stream());
 };

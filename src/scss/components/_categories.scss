@@ -1,0 +1,25 @@
+.categories {
+  @apply flex items-center justify-center gap-[20px] notXl:my-4;
+}
+
+.category {
+  @apply relative cursor-pointer pb-1 text-sm font-bold text-blue before:content-[""];
+
+  &::before {
+    @apply absolute bottom-0 left-0 block h-[3px] w-full scale-x-0 bg-blue transition duration-300;
+  }
+
+  &_active {
+    @apply text-black-main;
+  }
+
+  &_active::before {
+    @apply scale-x-100;
+  }
+
+  &:hover::before,
+  &:active:before,
+  &:focus-visible::before {
+    @apply scale-x-100;
+  }
+}

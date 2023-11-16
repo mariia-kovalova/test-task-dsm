@@ -9,7 +9,7 @@
   }
 
   .backdrop {
-    @apply pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-40 bg-black/20 opacity-0 transition-all;
+    @apply pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-40 bg-black-main/30 opacity-0 transition-all;
 
     &.is-open {
       @apply pointer-events-auto opacity-100;
@@ -17,9 +17,13 @@
   }
 
   .mobile-menu {
-    @apply absolute bottom-0 left-0 top-0 z-50 w-[84%] bg-white;
+    @apply absolute bottom-0 left-0 top-0 z-50 w-[296px] bg-white;
     transform: translateX(-100%);
     transition: transform 250ms;
+
+    &__top {
+      @apply flex items-center justify-between pb-4 pl-7 pr-3 pt-3;
+    }
 
     &.is-open {
       transform: translateX(0);

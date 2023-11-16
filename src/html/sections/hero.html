@@ -1,0 +1,18 @@
+{% set section = hero %}
+
+<section class="hero">
+  <div class="container">
+    <h1 class="visually-hidden">{{section.title.text}}</h1>
+    {% set title = section.title %} {% include "components/section-title.html"
+    %}
+    <!--  -->
+    {% set items = section.categories %} {% include "components/categories.html"
+    %}
+    <!--  -->
+    <ul class="hero__list">
+      {% set cards = section.cards %} {% for card in cards %}
+      <li class="hero__list-item">{% include 'components/card.html' %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

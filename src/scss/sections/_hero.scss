@@ -1,0 +1,10 @@
+.hero {
+  @apply pb-[35px] pt-4;
+
+  &__list {
+    @apply flex flex-col gap-3;
+  }
+
+  //   &__lis-item {
+  //   }
+}

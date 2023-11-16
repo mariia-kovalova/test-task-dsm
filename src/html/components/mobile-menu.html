@@ -1,22 +1,20 @@
 {% set component = components.navigation %}
 
-<div class="flex items-center justify-between">
-  <button type="button" class="burger" data-open-menu-btn>
-    {% set icon = components.navigation.icons.menu %} {% include
-    'components/icon.html' %}
-  </button>
-</div>
+<button type="button" class="burger" data-open-menu-btn>
+  {% set icon = components.navigation.icons.menu %} {% include
+  'components/icon.html' %}
+</button>
 
 <div class="backdrop">
   <div class="mobile-menu" data-menu>
-    <div>
+    <div class="mobile-menu__top">
       {% include 'components/logo.html' %}
       <button type="button" class="cross" data-close-menu-btn>
         {% set icon = components.navigation.icons.close %} {% include
         'components/icon.html' %}
       </button>
     </div>
-
-    {% include 'components/nav-menu.html' %}
+    {% set items = components.navigation.items.mobile %} {% include
+    'components/nav-menu.html' %}
   </div>
 </div>

@@ -1,0 +1,20 @@
+.nav {
+  &__list {
+    @apply xl:flex xl:w-[550px] xl:items-center xl:justify-between;
+  }
+
+  &__link {
+    @apply flex items-center justify-between py-3 pl-8 pr-[13px] text-sm font-black xl:gap-[2px] xl:p-0;
+    @apply transition duration-300 hover:text-blue focus:text-blue active:text-blue xl:hover:text-blue-light xl:focus:text-blue-light xl:active:text-blue-light notXl:hover:bg-body notXl:focus:bg-body notXl:active:bg-body;
+
+    & .arrow_sm {
+      @apply fill-gray opacity-30 transition duration-300 xl:h-3 xl:w-3 xl:rotate-90 xl:fill-blue-light xl:opacity-100;
+    }
+
+    &:hover .arrow_sm,
+    &:focus .arrow_sm,
+    &:active .arrow_sm {
+      @apply fill-blue-light opacity-100 xl:fill-blue;
+    }
+  }
+}

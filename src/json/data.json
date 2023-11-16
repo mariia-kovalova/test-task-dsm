@@ -380,10 +380,13 @@
             "class": "manchester_city"
           },
           "info": {
+            "isScore": false,
             "score": ["", ""],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
+        "isForecast": true,
         "forecast": {
           "text": "Прогноз",
           "icon": {
@@ -410,11 +413,14 @@
             "class": "valenciia"
           },
           "info": {
+            "isScore": false,
             "score": ["", ""],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -432,11 +438,14 @@
             "class": "manchester_city"
           },
           "info": {
+            "isScore": false,
             "score": ["", ""],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -454,11 +463,14 @@
             "class": "everton"
           },
           "info": {
+            "isScore": false,
             "score": ["", ""],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -476,10 +488,13 @@
             "class": "manchester_city"
           },
           "info": {
+            "isScore": true,
             "score": ["2", "3"],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
+        "isForecast": true,
         "forecast": {
           "text": "Прогноз",
           "icon": {
@@ -506,11 +521,14 @@
             "class": "valenciia"
           },
           "info": {
-            "score": ["0", "1"],
+            "isScore": true,
+            "score": ["1", "0"],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -528,11 +546,14 @@
             "class": "valenciia"
           },
           "info": {
+            "isScore": true,
             "score": ["0", "0"],
-            "helper": ["3", "4"]
+            "isHelper": true,
+            "helper": ["(3)", "(4)"]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -550,10 +571,13 @@
             "class": "barcelona"
           },
           "info": {
+            "isScore": true,
             "score": ["2", "4"],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
+        "isForecast": true,
         "forecast": {
           "text": "Прогноз",
           "icon": {
@@ -580,11 +604,14 @@
             "class": "manchester_city"
           },
           "info": {
+            "isScore": true,
             "score": ["0", "2"],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       },
       {
         "link": "#",
@@ -602,11 +629,14 @@
             "class": "valenciia"
           },
           "info": {
+            "isScore": true,
             "score": ["1", "2"],
+            "isHelper": false,
             "helper": ["", ""]
           }
         },
-        "forecast": ""
+        "isForecast": false,
+        "forecast": {}
       }
     ],
     "link_button": {

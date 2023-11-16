@@ -1,0 +1,33 @@
+<div class="game">
+  <p class="game__team {{game.team1.class}}">{{game.team1.text}}</p>
+
+  <div class="game__info">
+    {% if game.info.isHelper %}
+    <div class="game__helper">
+      <span>{{game.info.helper[0]}}</span>
+      <span class="game__devider">:</span>
+      <span>{{game.info.helper[1]}}</span>
+    </div>
+    {% endif %}
+
+    <!--  -->
+
+    {% if game.info.isScore %}
+    <div class="game__score">
+      <span>{{game.info.score[0]}}</span>
+      <span class="game__devider">:</span>
+      <span>{{game.info.score[1]}}</span>
+    </div>
+
+    {% else %}
+
+    <div class="game__score game__score_disabled">
+      <span>-</span>
+      <span class="game__devider">:</span>
+      <span>-</span>
+    </div>
+    {% endif %}
+  </div>
+
+  <p class="game__team {{game.team2.class}}">{{game.team2.text}}</p>
+</div>

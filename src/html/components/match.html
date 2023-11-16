@@ -1,7 +1,14 @@
 <a class="match match_{{match.due.status}}" href="{{match.link}}">
-  <div></div>
-  <div></div>
+  <p class="match__status">
+    {% if match.due.status === "live" %}
+    <span class="match__text">{{match.due.status}}</span>
+    {% endif %} {{match.due.text}}
+  </p>
 
-  {% if match.forecast %}{% set button = match.forecast %}{% include
-  'components/btn-with-icon.html' %} {% endif %}
+  <div class="match__forecast">
+    {% if match.isForecast %}{% set button = match.forecast %}{% include
+    'components/btn-with-icon.html' %} {% endif %}
+  </div>
+
+  {% set game = match.game %} {% include 'components/game.html' %}
 </a>

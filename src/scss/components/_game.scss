@@ -1,0 +1,63 @@
+$decor-imgs: (
+  borussia,
+  manchester_city,
+  everton,
+  valenciia,
+  wolverhampton,
+  barcelona
+);
+
+.game {
+  @apply flex flex-col gap-2 text-sm xl:flex-row xl:items-center xl:gap-[90px];
+
+  &__info {
+    @apply absolute right-[20px] top-[50px] flex gap-4 xl:flex-col-reverse xl:items-center xl:gap-0;
+    @apply xl:right-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-1/2;
+  }
+
+  &__devider {
+    @apply notXl:hidden;
+  }
+
+  &__helper,
+  &__score {
+    @apply flex flex-col gap-1 text-lg xl:flex-row;
+  }
+
+  &__helper {
+    @apply text-gray xl:text-sm xl:leading-4;
+  }
+
+  &__score {
+    @apply font-black xl:gap-[6px];
+
+    &_disabled {
+      @apply text-gray/30;
+    }
+  }
+
+  .match_live &__score {
+    @apply text-orange;
+  }
+
+  &__team {
+    @apply flex items-center gap-2 text-black-main xl:w-[calc((100%-90px)*0.5)];
+
+    &:first-of-type {
+      @apply xl:flex-row-reverse;
+    }
+
+    &::before {
+      @apply h-6 w-6 bg-cover bg-center bg-no-repeat content-[""] xl:h-7 xl:w-7;
+    }
+
+    @each $value in $decor-imgs {
+      &.#{$value}::before {
+        background-image: image-set(
+          '@img/matches/#{$value}.png' 1x,
+          '@img/matches/#{$value}@2x.png' 2x
+        );
+      }
+    }
+  }
+}

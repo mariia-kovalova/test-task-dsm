@@ -2,30 +2,31 @@
   @apply flex-grow;
 
   &__top {
-    @apply items-center md:flex md:gap-10;
+    @apply xl:flex xl:items-center xl:gap-5 xxl:gap-10;
   }
 
   &__wrapper {
-    @apply flex w-full items-center md:flex-grow md:flex-row-reverse md:justify-between smOnly:overflow-x-scroll smOnly:pb-[10px];
+    @apply flex items-center xl:flex-grow xl:flex-row-reverse xl:justify-between;
+    @apply smOnly:w-full mdOnly:w-[440px] notXl:mt-6 notXl:overflow-x-scroll notXl:pb-3;
   }
 
   &__list {
-    @apply mt-5 smOnly:mb-[26px];
-  }
-
-  & .btn-with-icon {
-    @apply mr-5 md:mr-8;
-  }
-
-  & .link-btn {
-    @apply mx-auto md:hidden;
+    @apply mt-5 flex flex-col gap-1 notXl:mb-[26px];
   }
 
   & .categories {
-    @apply gap-5 md:gap-6;
+    @apply gap-5 xxl:gap-6;
   }
 
   & .categories > .categories__item:first-child .category {
-    @apply md:mr-6;
+    @apply xxl:mr-6;
+  }
+
+  & .btn-with-icon__calendar {
+    @apply mr-5 xxl:mr-8;
+  }
+
+  & .link-btn {
+    @apply mx-auto xl:hidden;
   }
 }

@@ -1333,8 +1333,8 @@ body {
 
 @media (min-width: 1024px) {
   .match {
-    padding-top: 14.3px;
-    padding-bottom: 14.3px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
 .match::before {
@@ -1744,8 +1744,12 @@ body {
 .matches {
   flex-grow: 1;
 }
+.matches__top {
+  margin-bottom: 1.25rem;
+}
 @media (min-width: 1024px) {
   .matches__top {
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 1.25rem;
@@ -1785,7 +1789,6 @@ body {
   }
 }
 .matches__list {
-  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;

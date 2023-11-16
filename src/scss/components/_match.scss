@@ -1,5 +1,5 @@
 .match {
-  @apply relative block rounded-xl bg-white p-4 pt-[50px] xl:py-[14.3px];
+  @apply relative block rounded-xl bg-white p-4 pt-[50px] xl:py-[14px];
 
   &::before {
     @apply absolute left-0 top-9 h-[1px] w-full bg-gray/10 content-[""] xl:hidden;

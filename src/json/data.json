@@ -148,7 +148,6 @@
     ],
     "cards": [
       {
-        "category_id": "3",
         "link": "#",
         "popular": "популярный",
         "imgs_list": [
@@ -172,7 +171,6 @@
         "text": "Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022"
       },
       {
-        "category_id": "3",
         "link": "#",
         "popular": "популярный",
         "imgs_list": [
@@ -196,7 +194,6 @@
         "text": "Лейпциг - Хоффенхайм. Прогноз на матч 10.04.2022"
       },
       {
-        "category_id": "3",
         "link": "#",
         "popular": "",
         "imgs_list": [
@@ -325,6 +322,57 @@
         "height": 16
       }
     },
+    "categories": [
+      {
+        "id": "1",
+        "text": "Live",
+        "class": ""
+      },
+      {
+        "id": "2",
+        "text": "05.06",
+        "class": ""
+      },
+      {
+        "id": "3",
+        "text": "Вчера",
+        "class": ""
+      },
+      {
+        "id": "4",
+        "text": "Сегодня",
+        "class": "category_active"
+      },
+      {
+        "id": "5",
+        "text": "Завтра",
+        "class": ""
+      },
+      {
+        "id": "6",
+        "text": " 09.06",
+        "class": ""
+      }
+    ],
+    "calendar": {
+      "text": "Календарь",
+      "icon": {
+        "icon_aria": "Календарь",
+        "svg": "calendar",
+        "width": 24,
+        "height": 24
+      }
+    },
+    "prediction": {
+      "text": "Прогноз",
+      "icon": {
+        "icon_aria": "Прогноз",
+        "svg": "prediction",
+        "width": 16,
+        "height": 16
+      }
+    },
+    "matches_list": [{}],
     "link_button": {
       "href": "#",
       "text": "Все матчи",

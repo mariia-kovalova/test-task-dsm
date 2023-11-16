@@ -1,5 +1,26 @@
 .matches {
+  @apply flex-grow;
+
+  &__top {
+    @apply items-center md:flex md:gap-10;
+  }
+
+  &__wrapper {
+    @apply flex flex-grow items-center justify-between;
+  }
+
+  & .categories {
+    @apply gap-6;
+  }
+
+  & .btn-with-icon {
+    @apply mr-10;
+  }
+
   & .link-btn {
     @apply mx-auto md:hidden;
+  }
+  & .categories > .categories__item:first-child .category {
+    @apply pr-6;
   }
 }

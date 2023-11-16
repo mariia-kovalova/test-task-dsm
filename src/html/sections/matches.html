@@ -1,7 +1,18 @@
 {% set section = matches %}
 
 <section class="matches">
-  {% set title = section.title %} {% include "components/section-title.html" %}
+  <div class="matches__top">
+    {% set title = section.title %} {% include "components/section-title.html"
+    %}
+    <div class="matches__wrapper">
+      {% set items = section.categories %} {% include
+      "components/categories.html" %}
+      <!--  -->
+      {% set button = section.calendar %} {% include
+      'components/btn-with-icon.html' %}
+    </div>
+  </div>
+
   <!--  -->
   {% set link_button = section.link_button %}{% include
   'components/link-btn.html' %}

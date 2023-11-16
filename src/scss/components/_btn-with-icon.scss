@@ -1,0 +1,11 @@
+.btn-with-icon {
+  @apply flex items-center text-sm font-black text-blue;
+
+  & .calendar {
+    @apply gap-[6px];
+  }
+
+  & .prediction {
+    @apply gap-[2px];
+  }
+}

@@ -1,7 +1,7 @@
 <ul class="categories">
   {% for item in items %}
-  <li>
-    <p class="category {{item.class}}">{{item.text}}</p>
+  <li class="categories__item">
+    <button type="button" class="category {{item.class}}">{{item.text}}</button>
   </li>
   {% endfor %}
 </ul>

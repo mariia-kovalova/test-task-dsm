@@ -1,0 +1,6 @@
+{% set component = components.switcher %}
+
+<div class="switcher" aria-label="{{component.link_aria}}">
+  {% set icon = component.icon %} {% include 'components/icon.html' %}
+  <p>{{component.text}}</p>
+</div>

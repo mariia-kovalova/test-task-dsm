@@ -1,3 +1,3 @@
-import * as testWebP from "./modules/scripts.js";
+import { isWebP } from './modules/scripts.js';
 
-testWebP();
+isWebP();

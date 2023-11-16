@@ -1,7 +1,83 @@
 {
   "page": {
+    "lang": "ru",
     "title": "RaitingBet",
     "description": "Прогнози на спорт",
     "canonical": "./"
+  },
+  "components": {
+    "logo": {
+      "link_aria": "Ссылка на главную страницу сайта",
+      "icon": {
+        "icon_aria": "Логотип сайта",
+        "svg": "logo",
+        "width": 142,
+        "height": 24
+      }
+    },
+    "navigation": {
+      "icons": {
+        "menu": {
+          "icon_aria": "Иконка мобильного меню",
+          "svg": "menu",
+          "width": 32,
+          "height": 32
+        },
+        "close": {
+          "icon_aria": "Иконка закрытия мобильного меню",
+          "svg": "close",
+          "width": 32,
+          "height": 32
+        },
+        "arrow": {
+          "icon_aria": "Иконка стрелки",
+          "svg": "arrow_sm",
+          "width": 16,
+          "height": 16
+        }
+      },
+      "items": [
+        {
+          "link": "#",
+          "title": "Прогнозы",
+          "dropDown": true
+        },
+        {
+          "link": "#",
+          "title": "Бонусы",
+          "dropDown": true
+        },
+        {
+          "link": "#",
+          "title": "Букмекеры",
+          "dropDown": true
+        },
+        {
+          "link": "#",
+          "title": "Новости",
+          "dropDown": false
+        },
+        {
+          "link": "#",
+          "title": "Робобет",
+          "dropDown": false
+        },
+        {
+          "link": "#",
+          "title": "Блог",
+          "dropDown": false
+        }
+      ]
+    },
+    "switcher": {
+      "text": "Рус",
+      "link_aria": "Переключатель языка",
+      "icon": {
+        "icon_aria": "Иконка земли",
+        "svg": "lang",
+        "width": 24,
+        "height": 24
+      }
+    }
   }
 }

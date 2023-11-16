@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import "tailwindcss/base";
-// @import "tailwindcss/components";
-// @import "tailwindcss/utilities";
-
 @layer base {
-  @include font-face('Inter', '@fonts/Inter-Thin', 100);
-  @include font-face('Inter', '@fonts/Inter-Bold', 700);
+  // @include font-face('Inter', '../fonts/Inter-Thin', 100);
+  // @include font-face('Inter', '../fonts/Inter-ExtraLight', 200);
+  // @include font-face('Inter', '../fonts/Inter-Light', 300);
+  @include font-face('Inter', '../fonts/Inter-Regular', 400);
+  // @include font-face('Inter', '../fonts/Inter-Medium', 500);
+  @include font-face('Inter', '../fonts/Inter-SemiBold', 600);
+  @include font-face('Inter', '../fonts/Inter-Bold', 700);
+  // @include font-face('Inter', '../fonts/Inter-ExtraBold', 800);
+  @include font-face('Inter', '../fonts/Inter-Black', 900);
 }
 
 body {
-  background-color: rebeccapurple;
-  background: url('@img/IMG_20230809_223035_652.jpg');
+  @apply font-inter text-black-main bg-body text-sm font-normal;
 }
 
 .visually-hidden {

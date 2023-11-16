@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import { path } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 import { reset } from './gulp/tasks/reset.js';
-import { copy } from './gulp/tasks/copy.js';
 import { html } from './gulp/tasks/html.js';
 import { scss } from './gulp/tasks/scss.js';
 import { server } from './gulp/tasks/server.js';
@@ -23,15 +22,15 @@ global.app = {
 };
 
 function watcher() {
-  watch(path.watch.files, copy);
   watch(path.watch.html, series(html, scss));
+  watch(path.watch.data, series(html, scss));
   watch(path.watch.scss, scss);
   watch(path.watch.tailwindcss, scss);
   watch(path.watch.js, js);
   watch(path.watch.images, images);
 }
 
-const mainTasks = parallel(fonts, copy, html, scss, js, images, sprite);
+const mainTasks = parallel(fonts, html, scss, js, images, sprite);
 
 export const dev = series(reset, mainTasks, parallel(watcher, server));
 export const build = series(reset, mainTasks);

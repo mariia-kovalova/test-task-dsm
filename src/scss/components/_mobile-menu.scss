@@ -1,0 +1,40 @@
+@include mq(notDesktop) {
+  .nav {
+    @apply hidden;
+  }
+
+  .burger {
+    @apply xl:hidden;
+    cursor: pointer;
+  }
+
+  .backdrop {
+    @apply pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-40 bg-black/20 opacity-0 transition-all;
+
+    &.is-open {
+      @apply pointer-events-auto opacity-100;
+    }
+  }
+
+  .mobile-menu {
+    @apply absolute bottom-0 left-0 top-0 z-50 w-[84%] bg-white;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+
+    & .nav {
+      @apply block;
+    }
+  }
+}
+
+@include mq(desktop) {
+  .burger,
+  .mobile-menu,
+  .backdrop {
+    @apply hidden;
+  }
+}

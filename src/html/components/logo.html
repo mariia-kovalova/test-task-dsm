@@ -1,0 +1,5 @@
+{% set component = components.logo %}
+
+<a class="logo" href="{{page.canonical}}" aria-label="{{component.link_aria}}">
+  {% set icon = component.icon %} {% include 'components/icon.html' %}
+</a>

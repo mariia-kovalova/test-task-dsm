@@ -2,4 +2,8 @@
 @import 'utils/mixins';
 @import 'vendors/tailwind';
 
+@import 'components/logo';
+@import 'components/switcher';
+@import 'components/mobile-menu';
+
 @import 'sections/header';

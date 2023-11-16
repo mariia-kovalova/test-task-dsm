@@ -1,16 +1,17 @@
 const config = {
   mode: 'jit',
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,njk,js,json}'],
   theme: {
     // MEDIA QUERIES
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1280px',
+      xl: '1024px',
+      xxl: '1280px',
 
       smOnly: { max: '767.98px' },
-      mdOnly: { min: '768px', max: '1279.98px' },
-      notXl: { max: '1279.98px' },
+      mdOnly: { min: '768px', max: '1023.98px' },
+      notXl: { max: '1023.98px' },
     },
     // THEME
     extend: {
@@ -18,29 +19,32 @@ const config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '1.25rem',
-          sm: '1.25rem',
-          md: '2rem',
-          xl: '1.875rem',
+          DEFAULT: '12px',
+          sm: '12px',
+          md: '20px',
+          xl: '20px',
+          xxl: '36px',
         },
       },
       // FONTS
       fontFamily: {
-        inter: ['var(--font-inter)'],
-      },
-      fontSize: {
-        // base: ['16px', '1.2'],
-        // md: ['18px', '1.2'],
-        // lg: ['20px', '1.2'],
-        // xl: ['24px', '1.2'],
-        // xxl: ['32px', '1.2'],
-        // xxxl: ['40px', '1.2'],
+        inter: ['Inter', 'sans-serif'],
       },
       // COLORS
       colors: {
-        body: '#ffffff',
-        black: '#000000',
+        body: '#f3f6f9',
+        black: {
+          DEFAULT: '#000000',
+          main: ' #212121',
+        },
         white: '#ffffff',
+        gray: '#637093',
+        blue: {
+          DEFAULT: '#255ced',
+          light: '#5685ff',
+        },
+        orange: '#fd6230',
+        yellow: '#fedb0d',
       },
     },
   },

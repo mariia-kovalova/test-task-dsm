@@ -1,11 +1,12 @@
 .btn-with-icon {
-  @apply flex items-center text-sm font-black text-blue;
+  @apply flex items-center rounded-[40px] px-2 py-[6px] text-sm font-black text-blue;
+  @apply transition-all duration-300 hover:bg-blue-light/10 focus:bg-blue-light/10 active:bg-blue-light/10;
 
   & .calendar {
     @apply gap-[6px];
   }
 
-  & .prediction {
+  & .forecast {
     @apply gap-[2px];
   }
 }

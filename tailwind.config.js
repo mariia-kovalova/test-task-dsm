@@ -23,7 +23,7 @@ const config = {
           sm: '12px',
           md: '20px',
           xl: '20px',
-          xxl: '36px',
+          xxl: '76px',
         },
       },
       // FONTS

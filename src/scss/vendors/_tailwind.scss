@@ -30,4 +30,8 @@ body {
 
 .position-wrapper {
   @apply mb-20 flex flex-col-reverse gap-[52px] md:flex-row md:gap-6;
+
+  & .leagues {
+    @apply md:w-[264px];
+  }
 }

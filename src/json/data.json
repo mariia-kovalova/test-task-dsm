@@ -363,16 +363,252 @@
         "height": 24
       }
     },
-    "prediction": {
-      "text": "Прогноз",
-      "icon": {
-        "icon_aria": "Прогноз",
-        "svg": "prediction",
-        "width": 16,
-        "height": 16
+    "matches_list": [
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "Сегодня в 17:15"
+        },
+        "game": {
+          "team1": {
+            "text": "Боруссия",
+            "class": "borussia"
+          },
+          "team2": {
+            "text": "Манчестер Сити",
+            "class": "manchester_city"
+          },
+          "info": {
+            "score": ["", ""],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": {
+          "text": "Прогноз",
+          "icon": {
+            "icon_aria": "Прогноз",
+            "svg": "forecast",
+            "width": 16,
+            "height": 16
+          }
+        }
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "Завтра в 09:20"
+        },
+        "game": {
+          "team1": {
+            "text": "Евертон",
+            "class": "everton"
+          },
+          "team2": {
+            "text": "Валенсия",
+            "class": "valenciia"
+          },
+          "info": {
+            "score": ["", ""],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "Сегодня в 17:15"
+        },
+        "game": {
+          "team1": {
+            "text": "Боруссия",
+            "class": "borussia"
+          },
+          "team2": {
+            "text": "Манчестер Сити",
+            "class": "manchester_city"
+          },
+          "info": {
+            "score": ["", ""],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "20.12.2022, 19:45"
+        },
+        "game": {
+          "team1": {
+            "text": "Вулвергемптон",
+            "class": "wolverhampton"
+          },
+          "team2": {
+            "text": "Евертон",
+            "class": "everton"
+          },
+          "info": {
+            "score": ["", ""],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "live",
+          "text": "120’"
+        },
+        "game": {
+          "team1": {
+            "text": "Барселона",
+            "class": "barcelona"
+          },
+          "team2": {
+            "text": "Манчестер Сити",
+            "class": "manchester_city"
+          },
+          "info": {
+            "score": ["2", "3"],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": {
+          "text": "Прогноз",
+          "icon": {
+            "icon_aria": "Прогноз",
+            "svg": "forecast",
+            "width": 16,
+            "height": 16
+          }
+        }
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "live",
+          "text": "44’"
+        },
+        "game": {
+          "team1": {
+            "text": "Боруссия",
+            "class": "borussia"
+          },
+          "team2": {
+            "text": "Валенсия",
+            "class": "valenciia"
+          },
+          "info": {
+            "score": ["0", "1"],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "21.12.2022, 12:17"
+        },
+        "game": {
+          "team1": {
+            "text": "Евертон",
+            "class": "everton"
+          },
+          "team2": {
+            "text": "Валенсия",
+            "class": "valenciia"
+          },
+          "info": {
+            "score": ["0", "0"],
+            "helper": ["3", "4"]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "23.12.2022, 17:15"
+        },
+        "game": {
+          "team1": {
+            "text": "Манчестер Сити",
+            "class": "manchester_city"
+          },
+          "team2": {
+            "text": "Барселона",
+            "class": "barcelona"
+          },
+          "info": {
+            "score": ["2", "4"],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": {
+          "text": "Прогноз",
+          "icon": {
+            "icon_aria": "Прогноз",
+            "svg": "forecast",
+            "width": 16,
+            "height": 16
+          }
+        }
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "23.12.2022, 19:45"
+        },
+        "game": {
+          "team1": {
+            "text": "Барселона",
+            "class": "barcelona"
+          },
+          "team2": {
+            "text": "Манчестер Сити",
+            "class": "manchester_city"
+          },
+          "info": {
+            "score": ["0", "2"],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
+      },
+      {
+        "link": "#",
+        "due": {
+          "status": "due",
+          "text": "23.12.2022, 19:45"
+        },
+        "game": {
+          "team1": {
+            "text": "Евертон",
+            "class": "everton"
+          },
+          "team2": {
+            "text": "Валенсия",
+            "class": "valenciia"
+          },
+          "info": {
+            "score": ["1", "2"],
+            "helper": ["", ""]
+          }
+        },
+        "forecast": ""
       }
-    },
-    "matches_list": [{}],
+    ],
     "link_button": {
       "href": "#",
       "text": "Все матчи",

@@ -1,0 +1,7 @@
+<a class="match match_{{match.due.status}}" href="{{match.link}}">
+  <div></div>
+  <div></div>
+
+  {% if match.forecast %}{% set button = match.forecast %}{% include
+  'components/btn-with-icon.html' %} {% endif %}
+</a>

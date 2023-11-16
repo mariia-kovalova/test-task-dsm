@@ -15,8 +15,6 @@ $leagues_bg: (
 );
 
 .leagues {
-  @apply md:w-[264px];
-
   & .section-title {
     @apply mb-4 md:mb-6;
   }

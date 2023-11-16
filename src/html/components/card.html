@@ -1,4 +1,8 @@
-<div class="card">
+<a class="card" href="{{card.link}}">
+  {% if card.popular %}
+  <p class="card__popular">{{card.popular}}</p>
+  {% endif %}
+
   <div class="card__teams">
     {% for img in card.imgs_list %}
     <img
@@ -19,4 +23,4 @@
     </h4>
     <h3 class="card__title">{{card.text}}</h3>
   </div>
-</div>
+</a>

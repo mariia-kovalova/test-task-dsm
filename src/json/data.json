@@ -149,19 +149,20 @@
     "cards": [
       {
         "category_id": "3",
-        "isPopular": true,
+        "link": "#",
+        "popular": "популярный",
         "imgs_list": [
           {
             "alt": "Металлург Магнитогорск",
-            "src": "@img/team1.webp",
-            "srcset": "@img/team1@2x.webp",
+            "src": "@img/hero/team1.webp",
+            "srcset": "@img/hero/team1@2x.webp",
             "width": 74,
             "height": 74
           },
           {
             "alt": "Трактор",
-            "src": "@img/team2.webp",
-            "srcset": "@img/team2@2x.webp",
+            "src": "@img/hero/team2.webp",
+            "srcset": "@img/hero/team2@2x.webp",
             "width": 74,
             "height": 74
           }
@@ -172,19 +173,20 @@
       },
       {
         "category_id": "3",
-        "isPopular": true,
+        "link": "#",
+        "popular": "популярный",
         "imgs_list": [
           {
             "alt": "Лейпциг",
-            "src": "@img/team3.webp",
-            "srcset": "@img/team3@2x.webp",
+            "src": "@img/hero/team3.webp",
+            "srcset": "@img/hero/team3@2x.webp",
             "width": 74,
             "height": 74
           },
           {
             "alt": "Хоффенхайм",
-            "src": "@img/team4.webp",
-            "srcset": "@img/team4@2x.webp",
+            "src": "@img/hero/team4.webp",
+            "srcset": "@img/hero/team4@2x.webp",
             "width": 74,
             "height": 74
           }
@@ -195,19 +197,20 @@
       },
       {
         "category_id": "3",
-        "isPopular": false,
+        "link": "#",
+        "popular": "",
         "imgs_list": [
           {
             "alt": "Манчестер Сити",
-            "src": "@img/team5.webp",
-            "srcset": "@img/team5@2x.webp",
+            "src": "@img/hero/team5.webp",
+            "srcset": "@img/hero/team5@2x.webp",
             "width": 74,
             "height": 74
           },
           {
             "alt": "Ливерпуль",
-            "src": "@img/team6.webp",
-            "srcset": "@img/team6@2x.webp",
+            "src": "@img/hero/team6.webp",
+            "srcset": "@img/hero/team6@2x.webp",
             "width": 74,
             "height": 74
           }
@@ -216,6 +219,122 @@
         "due": "Завтра в 09:20",
         "text": "Манчестер Сити - Ливерпуль. Прогноз на матч 10.04.2022"
       }
-    ]
+    ],
+    "link_button": {
+      "href": "#",
+      "text": "Больше прогнозов",
+      "variant": "primary",
+      "arrow": {
+        "icon_aria": "Стрелка",
+        "svg": "arrow_lg",
+        "width": 24,
+        "height": 24
+      }
+    }
+  },
+  "leagues": {
+    "title": {
+      "text": "Топ лиги",
+      "icon": {
+        "icon_aria": "Слеш",
+        "svg": "slash",
+        "width": 16,
+        "height": 16
+      }
+    },
+    "leagues_list": [
+      {
+        "id": 1,
+        "link": "#",
+        "text": "Лига Чемпионов"
+      },
+      {
+        "id": 2,
+        "link": "#",
+        "text": "Лига Европы"
+      },
+      {
+        "id": 3,
+        "link": "#",
+        "text": "Суперкубок УЕФА"
+      },
+      {
+        "id": 4,
+        "link": "#",
+        "text": "Лига Конференций"
+      },
+      {
+        "id": 5,
+        "link": "#",
+        "text": "Клубный чемпионат мира"
+      },
+      {
+        "id": 6,
+        "link": "#",
+        "text": "Чемпионат Англии (АПЛ)"
+      },
+      {
+        "id": 7,
+        "link": "#",
+        "text": "Суперкубок Англии"
+      },
+      {
+        "id": 8,
+        "link": "#",
+        "text": "Кубок Английской Лиги (А..."
+      },
+      {
+        "id": 9,
+        "link": "#",
+        "text": "Чемпионшип"
+      },
+      {
+        "id": 10,
+        "link": "#",
+        "text": "Лига Чемпионов"
+      },
+      {
+        "id": 11,
+        "link": "#",
+        "text": "Суперкубок Англии"
+      },
+      {
+        "id": 12,
+        "link": "#",
+        "text": "Кубок Английской Лиги (А..."
+      },
+      {
+        "id": 13,
+        "link": "#",
+        "text": "Чемпионшип"
+      }
+    ],
+    "link_button": {
+      "href": "#",
+      "text": "Все лиги",
+      "variant": "secondary"
+    }
+  },
+  "matches": {
+    "title": {
+      "text": "Матч-центр",
+      "icon": {
+        "icon_aria": "Слеш",
+        "svg": "slash",
+        "width": 16,
+        "height": 16
+      }
+    },
+    "link_button": {
+      "href": "#",
+      "text": "Все матчи",
+      "variant": "primary",
+      "arrow": {
+        "icon_aria": "Стрелка",
+        "svg": "arrow_lg",
+        "width": 24,
+        "height": 24
+      }
+    }
   }
 }

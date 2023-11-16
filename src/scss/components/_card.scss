@@ -1,8 +1,12 @@
 .card {
-  @apply overflow-hidden rounded-xl;
+  @apply relative z-[2] block h-full rounded-xl bg-white;
+
+  &__popular {
+    @apply absolute left-1/2 top-0 z-[3] -translate-x-1/2 -translate-y-1/2 rounded-xl border-[3px] border-orange bg-yellow px-3 text-xs font-black uppercase;
+  }
 
   &__teams {
-    @apply relative flex h-[130px] w-full items-center justify-between px-[38px];
+    @apply relative z-[2] flex h-[130px] w-full items-center justify-between overflow-hidden rounded-tl-xl rounded-tr-xl px-[38px];
 
     &::after,
     &::before {
@@ -12,19 +16,22 @@
     &::before {
       @apply left-0 top-0 h-[130px] w-full;
       background-image: image-set(
-        '@img/stadium.webp' 1x,
-        '@img/stadium@2x.webp' 2x
+        '@img/hero/stadium.webp' 1x,
+        '@img/hero/stadium@2x.webp' 2x
       );
     }
 
     &::after {
-      @apply left-1/2 top-0 h-[130px]  w-[84px] -translate-x-1/2;
-      background-image: image-set('@img/vs.webp' 1x, '@img/vs@2x.webp' 2x);
+      @apply left-1/2 top-0 h-[130px] w-[84px] -translate-x-1/2;
+      background-image: image-set(
+        '@img/hero/vs.webp' 1x,
+        '@img/hero/vs@2x.webp' 2x
+      );
     }
   }
 
   &__content {
-    @apply bg-white p-5 pt-4;
+    @apply p-5 pt-4;
   }
 
   &__text {

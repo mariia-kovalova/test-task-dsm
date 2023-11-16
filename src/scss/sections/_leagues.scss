@@ -1,0 +1,53 @@
+$leagues_bg: (
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 1,
+  7: 2,
+  8: 3,
+  9: 4,
+  10: 5,
+  11: 1,
+  12: 2,
+  13: 3,
+);
+
+.leagues {
+  @apply md:w-[264px];
+
+  & .section-title {
+    @apply mb-4 md:mb-6;
+  }
+
+  &__content {
+    @apply rounded-xl bg-white p-4 pb-5;
+  }
+
+  &__list {
+    @apply mb-[10px] flex flex-col md:mb-3;
+  }
+
+  & .league {
+    @apply my-[10px] flex items-center gap-2 text-sm font-semibold;
+    @apply transition-all duration-300 hover:text-blue focus:text-blue active:text-blue;
+
+    &::before {
+      @apply block h-5 w-5 bg-cover bg-center bg-no-repeat content-[""];
+    }
+  }
+
+  @each $id, $value in $leagues_bg {
+    & .league_#{$id}::before {
+      background-image: image-set(
+        '@img/leagues/league#{$value}.png' 1x,
+        '@img/leagues/league#{$value}@2x.png' 2x
+      );
+    }
+  }
+
+  & .link-btn {
+    @apply mx-auto;
+  }
+}

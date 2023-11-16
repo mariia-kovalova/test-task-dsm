@@ -1,0 +1,20 @@
+.link-btn {
+  @apply flex w-fit items-center justify-center rounded-[20px] text-sm font-black;
+
+  &_primary {
+    @apply gap-[10px] border-[3px] border-blue-light py-[7px] pl-4 pr-3;
+    @apply transition-all duration-300 hover:bg-blue-light focus:bg-blue-light active:bg-blue-light;
+    @apply hover:text-white focus:text-white active:text-white;
+
+    &:hover .arrow_lg,
+    &:focus .arrow_lg,
+    &:active .arrow_lg {
+      @apply fill-white transition-all duration-300;
+    }
+  }
+
+  &_secondary {
+    @apply border-none bg-blue-light px-[44px] py-[11px] text-white;
+    @apply transition-all duration-300 hover:bg-blue focus:bg-blue active:bg-blue;
+  }
+}

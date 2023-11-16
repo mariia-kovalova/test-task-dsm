@@ -3,16 +3,21 @@
 <section class="hero">
   <div class="container">
     <h1 class="visually-hidden">{{section.title.text}}</h1>
-    {% set title = section.title %} {% include "components/section-title.html"
-    %}
-    <!--  -->
-    {% set items = section.categories %} {% include "components/categories.html"
-    %}
-    <!--  -->
-    <ul class="hero__list">
+    <div class="hero__top">
+      {% set title = section.title %} {% include "components/section-title.html"
+      %}
+      <!--  -->
+      {% set items = section.categories %} {% include
+      "components/categories.html" %}
+    </div>
+
+    <ul class="hero__cards">
       {% set cards = section.cards %} {% for card in cards %}
-      <li class="hero__list-item">{% include 'components/card.html' %}</li>
+      <li class="hero__cards-item">{% include 'components/card.html' %}</li>
       {% endfor %}
     </ul>
+
+    {% set link_button = section.link_button %}{% include
+    'components/link-btn.html' %}
   </div>
 </section>

@@ -27,3 +27,7 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
+
+.position-wrapper {
+  @apply mb-20 flex flex-col-reverse gap-[52px] md:flex-row md:gap-6;
+}

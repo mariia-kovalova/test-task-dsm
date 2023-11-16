@@ -1,10 +1,23 @@
 .hero {
   @apply pb-[35px] pt-4;
 
-  &__list {
-    @apply flex flex-col gap-3;
+  &__top {
+    @apply md:mb-6 md:flex md:items-center md:gap-10;
   }
 
-  //   &__lis-item {
-  //   }
+  & .categories {
+    @apply my-4 md:my-0;
+  }
+
+  &__cards {
+    @apply mb-[30px] flex flex-col items-stretch justify-center gap-3 md:flex-row md:flex-wrap md:gap-6 xl:mb-[33px];
+  }
+
+  &__cards-item {
+    @apply md:w-[calc((100%-24px)*0.5)] xl:w-[calc((100%-(24px*2))*0.33)];
+  }
+
+  & .link-btn {
+    @apply mx-auto;
+  }
 }

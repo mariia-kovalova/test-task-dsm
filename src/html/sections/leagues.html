@@ -1,0 +1,18 @@
+{% set section = leagues %}
+
+<section class="leagues">
+  {% set title = section.title %} {% include "components/section-title.html" %}
+  <div class="leagues__content">
+    <ul class="leagues__list">
+      {% for item in section.leagues_list %}
+      <li class="leagues__item">
+        <a href="{{item.link}}" class="league league_{{item.id}}"
+          >{{item.text}}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    {% set link_button = section.link_button %}{% include
+    'components/link-btn.html' %}
+  </div>
+</section>

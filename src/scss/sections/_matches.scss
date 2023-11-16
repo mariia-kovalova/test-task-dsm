@@ -1,0 +1,5 @@
+.matches {
+  & .link-btn {
+    @apply mx-auto md:hidden;
+  }
+}

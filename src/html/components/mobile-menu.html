@@ -9,11 +9,13 @@
   <div class="mobile-menu" data-menu>
     <div class="mobile-menu__top">
       {% include 'components/logo.html' %}
+      
       <button type="button" class="cross" data-close-menu-btn>
         {% set icon = components.navigation.icons.close %} {% include
         'components/icon.html' %}
       </button>
     </div>
+
     {% set items = components.navigation.items.mobile %} {% include
     'components/nav-menu.html' %}
   </div>
